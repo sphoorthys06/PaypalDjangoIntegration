@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .item-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .img {
+            width: 40%;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .details {
+            width: 55%;
+        }
+
+        .details h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .details p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #555;
+        }
+
+        button {
+            padding: 12px 20px;
+            border-radius: 5px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout for Item: {{.name}}</h1>
+        <div class="item-container">
+            <img class="img" src="{{item.image}}" alt="Items Image">
+            <div class="details">
+                <h2>{{item.name}}</h2>
+                <p>Price: ${{item.price}}</p>
+                {{paypal.render}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

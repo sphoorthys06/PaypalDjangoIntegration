@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .items-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .items {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        a.button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment Successful</h1>
+    <div class="items-container">
+        <div class="items">
+            <img class="img" src="{{item.image}}" alt="Item Image">
+            <p>{{item.name}}</p>
+            <p class="price">Price: ${{item.price}}</p>
+            <a href="/" class="button">Continue Shopping</a>
+        </div>  
+    </div>
+</body>
+</html>
